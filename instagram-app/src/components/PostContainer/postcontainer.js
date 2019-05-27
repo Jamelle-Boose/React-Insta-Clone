@@ -1,16 +1,13 @@
 import React from 'react'
-import CommentSection from '../CommentSection/commentsection'
+import Post from './post'
+import './post.css'
 
 const PostContainer = props => {
   return (
-    <div>
-      {props.data.comments.map(comment => (
-        <CommentSection comment={comment} />
+    <div className="container">
+      {props.data.map(post => (
+        <Post key={Date.now()} post={post} />
       ))}
-
-      <div>
-
-      </div>
     </div>
   )
 }

@@ -1,26 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
 import PostContainer from './components/PostContainer/postcontainer'
-import SearchBar from './components/SearchBar/searchbar'
-import { Columns } from "react-bulma-components/full";
-import { Image } from "react-bulma-components/full";
-import { Card } from "react-bulma-components/full";
+// import SearchBar from './components/SearchBar/searchbar'
+// import { Columns } from "react-bulma-components/full";
+// import { Image } from "react-bulma-components/full";
+// import { Card } from "react-bulma-components/full";
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
   super()
   this.state = {
-    posts: dummyData
+    data: dummyData
   } 
 }
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {dummyData.map(data => (
-          <PostContainer data={data} />
-        ))}
+        <PostContainer data={this.state.data} />
+      </div>
+    )
+  }
+}
+
+export default App;
+
+
+/* 
+iterate over said data, passing each individual object as a prop to an instance of `PostContainer`.
+
         <Columns>
           <Columns.Column size="three-quarters">
           <Card>
@@ -33,14 +41,5 @@ class App extends React.Component {
           </Card>
           </Columns.Column>
         </Columns>
-      </div>
-    );
-  }
-}
 
-export default App;
-
-
-/* 
-iterate over said data, passing each individual object as a prop to an instance of `PostContainer`.
 */
