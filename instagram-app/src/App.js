@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
 import PostContainer from './components/PostContainer/postcontainer'
+import SearchBar from './components/SearchBar/searchbarcontainer'
 // import SearchBar from './components/SearchBar/searchbar'
 // import { Columns } from "react-bulma-components/full";
 // import { Image } from "react-bulma-components/full";
@@ -17,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SearchBar />
         <PostContainer data={this.state.data} />
       </div>
     )

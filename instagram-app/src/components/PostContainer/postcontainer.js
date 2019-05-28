@@ -4,10 +4,10 @@ import './post.css'
 
 const PostContainer = props => {
   return (
-    <div className="container">
-      {props.data.map(post => (
-        <Post key={Date.now()} post={post} />
-      ))}
+    <div className="posts-container-wrapper">
+      {props.data.map(post => 
+        <Post key={post.imageUrl} post={post} />
+      )}
     </div>
   )
 }
