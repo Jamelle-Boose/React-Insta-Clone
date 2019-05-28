@@ -2,7 +2,7 @@ import React from 'react'
 import IGLogo from '../../assets/iglogo.png'
 import './searchbar.css'
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
@@ -13,7 +13,11 @@ const SearchBar = () => {
         /> 
       </div>
       <div>
-        <input type="text" placeholder="Search" />
+        <input
+        type="text"
+        placeholder="Search"
+        onKeyDown={props.searchPosts}
+        />
       </div>
       <div className="social-wrapper">
         <div className="social">
