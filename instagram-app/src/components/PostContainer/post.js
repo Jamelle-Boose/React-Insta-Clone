@@ -31,7 +31,7 @@ class Post extends React.Component {
           <img
           alt="post thumbnail"
           className="post-image"
-          src="{this.props.post.imageUrl}"
+          src={this.props.post.imageUrl}
           />
         </div>
         <LikeSection
