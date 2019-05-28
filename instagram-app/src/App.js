@@ -27,6 +27,8 @@ searchPostsHandler = e => {
   const data = this.state.data.filter(p => {
     if (p.username.includes(e.target.value)) {
       return p
+    } else {
+      return null
     }
   })
   this.setState({
@@ -37,7 +39,10 @@ searchPostsHandler = e => {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+        searchTerm={this.state.searchTerm}
+        searchPosts={this.searchPostsHandler}
+        />
         <PostContainer
         data={
           this.state.filteredPosts.length > 0
@@ -52,21 +57,3 @@ searchPostsHandler = e => {
 
 export default App;
 
-
-/* 
-iterate over said data, passing each individual object as a prop to an instance of `PostContainer`.
-
-        <Columns>
-          <Columns.Column size="three-quarters">
-          <Card>
-          <header className="card-header">
-            <p className="card-header-title">
-              Component
-            </p>
-            <Image renderAs="a" href="https://google.com" className="card-header-icon" target="_blank" aria-label="more options" />
-          </header>
-          </Card>
-          </Columns.Column>
-        </Columns>
-
-*/
