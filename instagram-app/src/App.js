@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.sass';
 import dummyData from './dummy-data'
 import PostContainer from './components/PostContainer/postcontainer'
 import SearchBar from './components/SearchBar/searchbarcontainer'
 // import SearchBar from './components/SearchBar/searchbar'
 // import { Columns } from "react-bulma-components/full";
 // import { Image } from "react-bulma-components/full";
-import { Card } from "react-bulma-components/full";
+// import { Card } from "react-bulma-components/full";
 
 class App extends Component {
   constructor() {

@@ -11,7 +11,7 @@ const PostHeader = props => {
         src={props.thumbnailUrl}
         />
       </div>
-      <div className="post-username">
+      <div className="post-username has-text-danger">
       {props.username}
       </div>
     </div>
