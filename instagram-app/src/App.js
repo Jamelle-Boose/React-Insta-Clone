@@ -6,7 +6,7 @@ import SearchBar from './components/SearchBar/searchbarcontainer'
 // import SearchBar from './components/SearchBar/searchbar'
 // import { Columns } from "react-bulma-components/full";
 // import { Image } from "react-bulma-components/full";
-// import { Card } from "react-bulma-components/full";
+import { Card } from "react-bulma-components/full";
 
 class App extends Component {
   constructor() {
