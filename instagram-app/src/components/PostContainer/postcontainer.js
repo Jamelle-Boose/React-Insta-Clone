@@ -1,20 +1,23 @@
 import React from 'react'
 import Post from './post'
-import './post.css'
+import './post.scss'
+import styled from 'styled-components'
+
+const PostWrapper = styled.div`
+  height: 50%;
+  width: 45%;
+  min-width: 300px;
+  margin: 5px auto;
+`
 
 const PostContainer = props => {
   return (
-    <div className="posts-container-wrapper">
-      {props.data.map(post => 
-        <Post key={post.imageUrl} post={post} />
-      )}
-    </div>
+    <PostWrapper>
+      {props.data.map(post => <Post key={post.imageUrl} post={post} />)}
+    </PostWrapper>
   )
 }
 
 
 export default PostContainer
 
-/*
-Each `PostContainer` component will then pass the array of comments on each post object as a prop to an instance of the `CommentSection` component.
-*/

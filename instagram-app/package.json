@@ -2,7 +2,6 @@
   "name": "instagram-app",
   "version": "0.1.0",
   "private": true,
-  "main": "App.scss",
   "dependencies": {
     "bulma": "^0.7.5",
     "node-sass": "^4.12.0",
@@ -10,7 +9,8 @@
     "react": "^16.8.6",
     "react-bulma-components": "^2.3.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "styled-components": "^4.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import './App.sass';
-import dummyData from './dummy-data'
-import PostContainer from './components/PostContainer/postcontainer'
-import SearchBar from './components/SearchBar/searchbarcontainer'
+import './App.scss';
+import PostPage from './components/PostContainer/postpage'
+import withAuthenticate from './components/Authentication/withauthenticate'
 // import SearchBar from './components/SearchBar/searchbar'
 // import { Columns } from "react-bulma-components/full";
 // import { Image } from "react-bulma-components/full";
@@ -10,50 +9,19 @@ import SearchBar from './components/SearchBar/searchbarcontainer'
 
 class App extends Component {
   constructor() {
-  super()
-  this.state = {
-    data: [],
-    filteredPosts: []
-  } 
-}
-
-componentDidMount() {
-  this.setState({
-    data: dummyData
-  })
-}
-
-searchPostsHandler = e => {
-  const data = this.state.data.filter(p => {
-    if (p.username.includes(e.target.value)) {
-      return p
-    } else {
-      return null
-    }
-  })
-  this.setState({
-    filteredPosts: data
-  })
-}
+    super()
+    this.state = {}
+  }
 
   render() {
     return (
       <div className="App">
-        <SearchBar
-        searchTerm={this.state.searchTerm}
-        searchPosts={this.searchPostsHandler}
-        />
-        <PostContainer
-        data={
-          this.state.filteredPosts.length > 0
-          ? this.state.filteredPosts
-          : this.state.data
-        }
-        />
+        <PostPage />
       </div>
     )
   }
 }
 
-export default App;
+
+export default withAuthenticate(App);
 
